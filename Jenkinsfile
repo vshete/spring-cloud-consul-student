@@ -7,9 +7,10 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        stage ('declare completion') {
+        stage ('Unit Tests') {
         	steps {
-        		echo 'build completed successfully.'
+        		echo 'Running Unit tests'
+        		sh 'mvn test'
         	}
         }
     }
