@@ -7,5 +7,10 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
+        stage ('declare completion') {
+        	steps {
+        		echo 'build completed successfully.'
+        	}
+        }
     }
 }
