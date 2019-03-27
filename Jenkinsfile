@@ -13,11 +13,5 @@ pipeline {
         		sh 'mvn test'
         	}
         }
-        stage ('Deploy') {
-        	steps {
-        		echo 'Starting the application'
-        		sh 'mvn spring-boot:run'
-        	}
-        }
     }
 }
